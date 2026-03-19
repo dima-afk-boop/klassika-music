@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Шедеври класицизму</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: white;
+}
+.header {
+  padding: 30px;
+  background: linear-gradient(180deg, #1db954, #121212);
+}
+.header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: #181818;
+  transition: 0.2s;
+}
+.track:hover {
+  background: #282828;
+}
+.track-info {
+  text-align: left;
+}
+.title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.artist {
+  font-size: 13px;
+  color: #b3b3b3;
+}
+.play-btn {
+  background: #1db954;
+  border: none;
+  color: black;
+  padding: 10px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.play-btn:hover {
+  background: #1ed760;
+}
+iframe {
+  width: 100%;
+  height: 80px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+</style>
+<script>
+function togglePlayer(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+</head>
+<body>
+
+<div class="header">
+  <h1>🎧 Шедеври класицизму</h1>
+</div>
+
+<div class="container">
+
+<div class="track">
+  <div class="track-info">
+    <div class="title">Симфонія №40</div>
+    <div class="artist">Моцарт</div>
+  </div>
+  <button class="play-btn" onclick="togglePlayer('p1')">▶</button>
+</div>
+<iframe id="p1" style="display:none" src="https://www.youtube.com/embed/JTc1mDieQI8"></iframe>
+
+<div class="track">
+  <div class="track-info">
+    <div class="title">Місячна соната</div>
+    <div class="artist">Бетховен</div>
+  </div>
+  <button class="play-btn" onclick="togglePlayer('p2')">▶</button>
+</div>
+<iframe id="p2" style="display:none" src="https://www.youtube.com/embed/4Tr0otuiQuU"></iframe>
+
+<div class="track">
+  <div class="track-info">
+    <div class="title">Симфонія №94 «Сюрприз»</div>
+    <div class="artist">Гайдн</div>
+  </div>
+  <button class="play-btn" onclick="togglePlayer('p3')">▶</button>
+</div>
+<iframe id="p3" style="display:none" src="https://www.youtube.com/embed/tF5kr251BRs"></iframe>
+
+<div class="track">
+  <div class="track-info">
+    <div class="title">Маленька нічна серенада</div>
+    <div class="artist">Моцарт</div>
+  </div>
+  <button class="play-btn" onclick="togglePlayer('p4')">▶</button>
+</div>
+<iframe id="p4" style="display:none" src="https://www.youtube.com/embed/o1FSN8_pp_o"></iframe>
+
+<div class="track">
+  <div class="track-info">
+    <div class="title">Концерт №21</div>
+    <div class="artist">Моцарт</div>
+  </div>
+  <button class="play-btn" onclick="togglePlayer('p5')">▶</button>
+</div>
+<iframe id="p5" style="display:none" src="https://www.youtube.com/embed/df-eLzao63I"></iframe>
+
+</div>
+
+</body>
+</html>
